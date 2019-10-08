@@ -11,7 +11,7 @@ import android.content.Intent;
 import androidx.core.app.NotificationCompat;
 
 
-public class Receiver extends BroadcastReceiver {
+public class Rcvr extends BroadcastReceiver {
 
     @Override
     public void onReceive(Context context, Intent intent) {
@@ -44,7 +44,6 @@ public class Receiver extends BroadcastReceiver {
                 .setSmallIcon(R.mipmap.ic_launcher)
                 .setContentIntent(pendingIntent)
                 .setContentTitle(context.getResources().getString(R.string.push))
-                .setStyle(new NotificationCompat.BigPictureStyle().setBigContentTitle(context.getResources().getString(R.string.push)))
                 .setAutoCancel(true);
     }
 }

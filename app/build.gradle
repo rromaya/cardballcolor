@@ -4,22 +4,46 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.cardsball.colors"
+        applicationId "com.cardsball.speed"
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+    signingConfigs {
+
+        production {
+            storeFile file("../keystore/android_release.keystore")
+            storePassword "dissport_release_pass"
+            keyAlias "dissport_release"
+            keyPassword "dissport_release_pass"
+        }
+
+        debug {
+            storeFile file("../keystore/android_debug.keystore")
+            storePassword "dissport_debug_pass"
+            keyAlias "dissport_debug"
+            keyPassword "dissport_debug_pass"
+        }
+
+    }
+
     buildTypes {
         release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            minifyEnabled true
+            signingConfig signingConfigs.production
+            proguardFiles 'proguard-rules.pro'
+        }
+
+        debug {
+            signingConfig signingConfigs.debug
         }
     }
+
     compileOptions {
-        sourceCompatibility = 1.8
-        targetCompatibility = 1.8
+        sourceCompatibility = '1.8'
+        targetCompatibility = '1.8'
     }
 }
 

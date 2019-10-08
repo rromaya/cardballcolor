@@ -10,10 +10,9 @@ import java.util.Calendar;
 
 import static android.content.Context.ALARM_SERVICE;
 
-public class Messages {
+class Messages {
     static final String TYPE_EXTRA = "type";
-
-    public void messageSchedule(Context context){
+    void messageSchedule(Context context){
         Calendar calendar = Calendar.getInstance();
 
         int n = 0;
@@ -34,12 +33,11 @@ public class Messages {
                 scheduleMessage(calendar, context, i);
                 n++;
             }
-
         }
     }
 
     private void scheduleMessage(Calendar calendar, Context context, int type) {
-        Intent i = new Intent(context, Receiver.class);
+        Intent i = new Intent(context, Rcvr.class);
         i.putExtra(TYPE_EXTRA, type);
 
         PendingIntent pendingIntent = PendingIntent.getBroadcast(context, type, i, PendingIntent.FLAG_UPDATE_CURRENT);
