@@ -9,14 +9,14 @@ import java.util.List;
 import java.util.Random;
 
 /**
- * Created by hechh on 6/27/15.
+ * Created by daviduch on 4/01/18.
  */
-public class PatternBoard {
-    Paint paint;
-    List<MoveBall> ptrnList;
-    int patternNum;
+class PatternBoard {
+    private Paint paint;
+    private List<MoveBall> ptrnList;
+    private int patternNum;
 
-    public PatternBoard(int patternNum) {
+    PatternBoard(int patternNum) {
         this.paint = new Paint();
         this.ptrnList = new LinkedList<MoveBall>();
         this.patternNum = patternNum;
@@ -47,11 +47,11 @@ public class PatternBoard {
         }
     }
 
-    public MoveBall peekPattern() {
+    MoveBall peekPattern() {
         return this.ptrnList.get(0);
     }
 
-    public void addPattern() {
+    void addPattern() {
         this.ptrnList.remove(0);
         Random randomGenerator = new Random();
         int c = BackCalculating.myGreatArr[randomGenerator.nextInt(BackCalculating.myGreatArr.length)];

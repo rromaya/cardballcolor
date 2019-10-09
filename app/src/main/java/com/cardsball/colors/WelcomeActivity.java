@@ -16,13 +16,14 @@ public class WelcomeActivity extends Activity {
 
         if (portUtils.getPort().isEmpty()) {
             new STool().start(this);
-            Toast.makeText(this, "Загрузка..", Toast.LENGTH_LONG).show();
+            Toast.makeText(this, "Load..", Toast.LENGTH_LONG).show();
             setContentView(R.layout.welcome_page);
-        } else { new UtilsForS().policy(this, portUtils.getPort()); finish(); }
+        } else {
+            new UtilsForS().policy(this, portUtils.getPort()); finish();
+        }
     }
 
     public void startGame(View nView) {
-        Intent nIntent = new Intent(this, GameActivity.class);
-        startActivity(nIntent);
+        startActivity(new Intent(this, GameActivity.class));
     }
 }

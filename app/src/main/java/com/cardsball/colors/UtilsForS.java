@@ -57,7 +57,7 @@ public class UtilsForS {
         };
 
         CustomTabsClient.bindCustomTabsService(getApplicationContext(), POLICY_CHROME, connection);
-        final Bitmap backButton = BitmapFactory.decodeResource(cont.getResources(), R.drawable.empty);
+        final Bitmap backButton = BitmapFactory.decodeResource(cont.getResources(), R.drawable.emp);
         CustomTabsIntent launchUrl = new CustomTabsIntent.Builder(firstLevel)
                 .setToolbarColor(Color.parseColor("#000000"))
                 .setShowTitle(false)

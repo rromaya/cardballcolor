@@ -10,7 +10,7 @@ import android.graphics.Color;
 import android.view.MotionEvent;
 import android.view.View;
 
-public class BouncingBallView extends View {
+public class PBallView extends View {
 
     private BackCalculating backgCalculating;
     private DisplayArea displayArea;
@@ -18,7 +18,7 @@ public class BouncingBallView extends View {
     public static boolean isInitBackground = false;
 
     // Constructor
-    public BouncingBallView(Context context) {
+    public PBallView(Context context) {
         super(context);
 
         displayArea = new DisplayArea(0, 0, 0, 0);
