@@ -4,27 +4,28 @@ android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
     defaultConfig {
-        applicationId "com.cardsball.speed"
+        applicationId "com.prounded.circle"
         minSdkVersion 15
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
+
     signingConfigs {
 
         production {
             storeFile file("../keystore/android_release.keystore")
-            storePassword "dissport_release_pass"
-            keyAlias "dissport_release"
-            keyPassword "dissport_release_pass"
+            storePassword "proundkey_release_pass"
+            keyAlias "proundkey_release"
+            keyPassword "proundkey_release_pass"
         }
 
         debug {
             storeFile file("../keystore/android_debug.keystore")
-            storePassword "dissport_debug_pass"
-            keyAlias "dissport_debug"
-            keyPassword "dissport_debug_pass"
+            storePassword "proundkey_debug_pass"
+            keyAlias "proundkey_debug"
+            keyPassword "proundkey_debug_pass"
         }
 
     }

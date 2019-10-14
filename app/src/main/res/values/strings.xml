@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">PBall</string>
+    <string name="app_name">P-round</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
     <string name="push">Go now!</string>
-    <string name="facebook_app_id">546193472590315</string>
-    <string name="fb_login_protocol_scheme">fb546193472590315</string>
+    <string name="facebook_app_id">1247188395464773</string>
+    <string name="fb_login_protocol_scheme">fb1247188395464773</string>
     <string name="str_begin">Start!</string>
     <string name="title_game">GameBoard</string>
 </resources>
